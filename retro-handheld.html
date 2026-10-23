@@ -30,7 +30,7 @@ cyl(-.58,-.63,.17,darkMat);cyl(-.58,-.63,.1,shellMat);cyl(.57,-.54,.115,buttonMa
 for(let i=0;i<3;i++)add(new THREE.SphereGeometry(.035,12,8),darkMat,[-.14+i*.14,-.45,.31]);
 for(let i=0;i<6;i++)add(new THREE.BoxGeometry(.09,.025,.035),darkMat,[-.72+i*.29,1.48,.24]);
 function resize(){const r=stage.getBoundingClientRect();renderer.setSize(r.width,r.height,false);camera.aspect=r.width/r.height;camera.updateProjectionMatrix()}new ResizeObserver(resize).observe(stage);resize();
-let glow=true,spin=true;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;function animate(){requestAnimationFrame(animate);if(spin&&!reduced&&!orbit.enabled===false)device.rotation.y+=.0018;orbit.update();renderer.render(scene,camera)}animate();
+let glow=true,spin=true;const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;function animate(){requestAnimationFrame(animate);if(spin&&!reduced)device.rotation.y+=.0018;orbit.update();renderer.render(scene,camera)}animate();
 document.querySelectorAll('#shells button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#shells button').forEach(x=>x.classList.remove('active'));b.classList.add('active');shellMat.color.set(b.dataset.shell)});
 document.querySelector('#resetView').onclick=()=>{camera.position.set(4.5,3.4,6.3);orbit.target.set(0,.25,0);orbit.update()};
 document.querySelector('#glow').onclick=e=>{glow=!glow;screenMat.emissiveIntensity=glow?1.3:.1;e.currentTarget.textContent='Display glow: '+(glow?'on':'off')};
