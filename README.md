@@ -3,12 +3,12 @@
 A responsive concept hub for 20 experimental web experiences, with a dedicated real-time Three.js cyber-mascot scene.
 
 ## Run locally
-Open `index.html` in a modern browser. Open `cyber-mascot.html` for the dedicated 3D experience. No build step is required, but the Three.js page needs internet access to load its ES modules from jsDelivr and a browser with WebGL support.
+Open `index.html` in a modern browser. Open `cyber-mascot.html` for the dedicated 3D experience and `cyber-kicks.html` for the interactive sneaker configurator. No build step is required, but the Three.js page needs internet access to load its ES modules from jsDelivr and a browser with WebGL support.
 
 ## What's included
 - 20 concept cards with category filters and interactive preview prototypes.
 - Dedicated `cyber-mascot.html` page using Three.js, OrbitControls, procedural panda geometry, headphone details, realtime lights, a holographic halo, floating data chips, and an interactive scene.
-- Dedicated `interactive-desk.html` page: warm workshop visual identity, procedural 3D desk, monitor, keyboard, coffee mug and lamp; click-to-inspect object hotspots, desk tour, lamp controls, and orbit camera.
+- Dedicated `cyber-kicks.html` page: Three.js procedural sneaker product scene with orbit/zoom, upper and accent color swatches, satin/mesh/chrome finishes, sole-height and studio/night/day lighting controls, reset, and locally exported JSON build specs. This is a concept model, not a purchasable shoe.\n- Dedicated `interactive-desk.html` page: warm workshop visual identity, procedural 3D desk, monitor, keyboard, coffee mug and lamp; click-to-inspect object hotspots, desk tour, lamp controls, and orbit camera.
 - Drag-to-orbit and scroll-to-zoom camera controls; reset camera, pause/resume mascot idle animation, hide/show floor grid, click mascot to trigger a response, wave button, and cyan / after-hours vibe switch.
 - Responsive desktop/mobile layout, keyboard-friendly controls, and reduced-motion-aware CSS.
 - Local terminal demo: `/help`, `/about`, `/skills`, `/worlds`, `/random`, `/wave`, `/clear`.
