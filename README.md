@@ -1,19 +1,19 @@
 # NEW4® — Interactive Worlds
 
-A responsive concept hub for 20 experimental web experiences, built as a lightweight static site.
+A responsive concept hub for 20 experimental web experiences, with a dedicated real-time Three.js cyber-mascot scene.
 
 ## Run locally
-Open `index.html` in a modern browser. No build step is required.
+Open `index.html` in a modern browser. Open `cyber-mascot.html` for the dedicated 3D experience. No build step is required, but the Three.js page needs internet access to load its ES modules from jsDelivr and a browser with WebGL support.
 
 ## What's included
-- 20 concept cards with category filters.
-- Responsive dark interface, animated abstract hero visual, and optional reduced-motion support.
-- Working command prompt: `/help`, `/worlds`, `/status`, `/skills`, `/hire`, `/random`, `/clear`.
-- Interactive concept previews for the 20 ideas: material mood switches, bill split math, focus timer, command search, draggable badges/windows, mock RPG unlocks, and more.
-- Mobile layout and keyboard dismissal / Ctrl+K terminal focus.
+- 20 concept cards with category filters and interactive preview prototypes.
+- Dedicated `cyber-mascot.html` page using Three.js, OrbitControls, procedural panda geometry, headphone details, realtime lights, a holographic halo, floating data chips, and an interactive scene.
+- Drag-to-orbit and scroll-to-zoom camera controls; reset camera, pause/resume mascot idle animation, hide/show floor grid, click mascot to trigger a response, wave button, and cyan / after-hours vibe switch.
+- Responsive desktop/mobile layout, keyboard-friendly controls, and reduced-motion-aware CSS.
+- Local terminal demo: `/help`, `/about`, `/skills`, `/worlds`, `/random`, `/wave`, `/clear`.
 
-## Important scope notes
-This is the first interactive prototype, not a claim that all 20 concepts are production-complete. Some previews are illustrative and do not yet connect to external APIs, real-time multiplayer, licensed audio, actual video processing, AR, or full Three.js / GLB scenes. Do not present placeholder counters or sample data as live services. The next phase should replace the relevant previews with dedicated pages, real 3D assets and engines, persistence/backend integrations where required, and automated browser tests.
+## Scope and limitations
+The panda is procedurally assembled from Three.js geometry; it is not a scanned or externally authored GLB character. This is a first dedicated 3D experience, not a claim that all 20 concepts are production-complete. The remaining concepts still need their own dedicated pages and proper implementations. Demo commands are local and no external AI service, backend, multiplayer, audio engine, video processor, or AR device integration is connected. Validate third-party CDN availability and browser WebGL support before deployment.
 
 ## Deploy
-The repository can be deployed as a static site with GitHub Pages or another static hosting provider. Enable Pages for the `main` branch and root directory after reviewing the prototype.
+This is a static site. It can be deployed with GitHub Pages or another static hosting provider from the repository root. The 3D experience loads Three.js as browser ES modules from jsDelivr, so deployment visitors need access to that CDN.
